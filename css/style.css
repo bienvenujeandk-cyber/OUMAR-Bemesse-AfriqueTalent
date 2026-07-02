@@ -1,7 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-:root{--primary:#0d6efd;--secondary:#6c757d;--light:#f8f9fa;--dark:#212529;--space:16px;--radius:8px;--font1:'Poppins',sans-serif;--font2:'Roboto',sans-serif;}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font1);background:var(--light);color:var(--dark)}
-nav{display:flex;gap:20px;padding:var(--space);background:var(--primary)}
-nav a{color:white;text-decoration:none}
-.logo{font-weight:bold;color:white}
+:root {
+  --primary: #e8a33d;
+  --dark: #1c1c1e;
+  --light-bg: #faf7f2;
+  --text-muted: #6b6b6b;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--dark);
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+/* ===================== HERO (disposition asymétrique) ===================== */
+.hero {
+  background: linear-gradient(135deg, var(--dark), #2e2a24);
+  color: #fff;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero-text .highlight {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.hero-text .lead {
+  margin: 1.5rem 0 2rem;
+  color: #d8d4cd;
+  max-width: 480px;
+}
+
+.hero-actions .btn {
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  margin-right: 1rem;
+}
+
+.hero-visual {
+  position: relative;
+  height: 320px;
+}
+
+.hero-shape {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle at 30% 30%, var(--primary), transparent 70%);
+  border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+  filter: blur(2px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(8deg); }
+}
+
+/* ===================== COMMENT ÇA MARCHE (Bento Grid) ===================== */
+.how-it-works {
+  padding: 6rem 0;
+  background: var(--light-bg);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+.bento-item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.bento-large {
+  grid-column: span 2;
+  grid-row: span 1;
+  background: var(--dark);
+  color: #fff;
+}
+
+.bento-wide {
+  grid-column: span 3;
+  background: linear-gradient(135deg, var(--primary), #d88a1f);
+  color: #fff;
+}
+
+.bento-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.bento-item h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-large, .bento-wide { grid-column: span 1; }
+}
+
+/* ===================== CATÉGORIES DE SERVICES (hover) ===================== */
+.categories {
+  padding: 6rem 0;
+}
+
+.category-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card i {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.category-card h4 {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.category-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(232, 163, 61, 0.25);
+  border-color: var(--primary);
+}
+
+.category-card:hover i {
+  transform: rotate(-8deg) scale(1.15);
+}
+
+/* ===================== TÉMOIGNAGES (Carousel) ===================== */
+.testimonials {
+  padding: 6rem 0;
+  background: var(--light-bg);
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimonial-card p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--dark);
+}
+
+.testimonial-card h5 {
+  margin-top: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+  background-color: var(--dark);
+  border-radius: 50%;
+  padding: 1rem;
+}
