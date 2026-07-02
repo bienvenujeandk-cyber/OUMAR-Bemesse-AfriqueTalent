@@ -3,12 +3,40 @@
   --dark: #1c1c1e;
   --light-bg: #faf7f2;
   --text-muted: #6b6b6b;
+  --bg-body: #ffffff;
+  --text-body: #1c1c1e;
+  --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --light-bg: #17171a;
+  --bg-body: #101012;
+  --text-body: #f2f0eb;
+  --card-bg: #1f1f22;
+  --text-muted: #a3a3a8;
 }
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  color: var(--dark);
-  background: #fff;
+  color: var(--text-body);
+  background: var(--bg-body);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .how-it-works,
+[data-theme="dark"] .testimonials {
+  background: var(--light-bg);
+}
+
+[data-theme="dark"] .bento-item,
+[data-theme="dark"] .category-card {
+  background: var(--card-bg);
+  border-color: #2b2b2f;
+}
+
+[data-theme="dark"] .category-card p,
+[data-theme="dark"] .testimonial-card p {
+  color: var(--text-muted);
 }
 
 .section-title {
@@ -343,4 +371,76 @@ body {
     margin-top: 0.75rem;
     padding: 1rem;
   }
+}
+
+/* ===================== TOGGLE DARK / LIGHT MODE ===================== */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--primary);
+  transform: rotate(15deg);
+}
+
+/* ===================== NAVBAR DYNAMIQUE AU SCROLL ===================== */
+.custom-navbar {
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.custom-navbar.navbar-shrink {
+  padding: 0.5rem 0;
+  background: rgba(16, 16, 18, 0.97);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.custom-navbar.navbar-shrink .navbar-brand {
+  font-size: 1.15rem;
+}
+
+/* ===================== BOUTON RETOUR EN HAUT ===================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #d88a1f;
+  transform: translateY(-4px);
 }

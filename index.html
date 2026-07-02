@@ -17,11 +17,16 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
         <li class="nav-item"><a class="nav-link" href="#how">Comment ça marche</a></li>
         <li class="nav-item"><a class="nav-link" href="#categories">Catégories</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Témoignages</a></li>
         <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
+        <li class="nav-item">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </div>
@@ -152,7 +157,13 @@
   </div>
 </section>
 
+<!-- ===================== BOUTON RETOUR EN HAUT ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
