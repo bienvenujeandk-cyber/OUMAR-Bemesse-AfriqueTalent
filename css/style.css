@@ -17,11 +17,48 @@ body {
   margin-bottom: 3rem;
 }
 
+/* ===================== NAVBAR (responsive, hamburger) ===================== */
+.custom-navbar {
+  background: rgba(28, 28, 30, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 0.9rem 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.custom-navbar .navbar-brand .highlight {
+  color: var(--primary);
+}
+
+.custom-navbar .nav-link {
+  color: #d8d4cd;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary);
+}
+
+.custom-navbar .navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
 /* ===================== HERO (disposition asymétrique) ===================== */
 .hero {
   background: linear-gradient(135deg, var(--dark), #2e2a24);
   color: #fff;
-  padding: 6rem 0;
+  padding: 9rem 0 6rem;
   overflow: hidden;
   position: relative;
 }
@@ -203,4 +240,107 @@ body {
   background-color: var(--dark);
   border-radius: 50%;
   padding: 1rem;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+/* Mobile first : styles de base ci-dessus = mobile (dès 375px) */
+
+/* ---- Tablette : 768px et plus ---- */
+@media (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-large {
+    grid-column: span 2;
+  }
+
+  .bento-wide {
+    grid-column: span 2;
+  }
+
+  .testimonial-card p {
+    font-size: 1.15rem;
+  }
+}
+
+/* ---- Desktop : 1200px et plus ---- */
+@media (min-width: 1200px) {
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bento-large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .bento-wide {
+    grid-column: span 3;
+  }
+}
+
+/* ---- Mobile étroit : jusqu'à 767px (référence 375px) ---- */
+@media (max-width: 767px) {
+  .hero {
+    padding: 7rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-text .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions .btn {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+
+  .hero-visual {
+    height: 180px;
+    margin-top: 2rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-large,
+  .bento-wide {
+    grid-column: span 1;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-card {
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .custom-navbar .navbar-collapse {
+    background: rgba(28, 28, 30, 0.97);
+    border-radius: 12px;
+    margin-top: 0.75rem;
+    padding: 1rem;
+  }
 }
