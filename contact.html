@@ -1,1 +1,97 @@
-<!DOCTYPE html><html><head><link rel='stylesheet' href='css/style.css'></head><body><nav><span class='logo'>AfriTalent</span><a>Accueil</a><a>Freelances</a><a>Tarifs</a><a>À propos</a><a>Contact</a></nav></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfriqueTalent - Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Afrique<span class="highlight">Talent</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
+        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
+        <li class="nav-item">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== EN-TÊTE ===================== -->
+<section class="about-hero fade-in-section">
+  <div class="container">
+    <h1>Contactez-<span class="highlight">nous</span></h1>
+    <p class="lead">Une question, un projet ? Écrivez-nous, nous vous répondons rapidement.</p>
+  </div>
+</section>
+
+<!-- ===================== FORMULAIRE DE CONTACT ===================== -->
+<section class="contact-section fade-in-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+
+        <form id="contactForm" novalidate>
+
+          <div class="form-group mb-4">
+            <label for="fullName">Nom complet</label>
+            <input type="text" id="fullName" name="fullName" class="form-control-custom" placeholder="Votre nom et prénom">
+            <span class="error-message" id="error-fullName"></span>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="email">Adresse email</label>
+            <input type="text" id="email" name="email" class="form-control-custom" placeholder="vous@exemple.com">
+            <span class="error-message" id="error-email"></span>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" class="form-control-custom" placeholder="Objet de votre message">
+            <span class="error-message" id="error-subject"></span>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control-custom" rows="6" placeholder="Décrivez votre besoin (20 caractères minimum)"></textarea>
+            <span class="error-message" id="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-100">Envoyer le message</button>
+
+          <div class="success-message" id="successMessage">
+            <i class="bi bi-check-circle-fill"></i> Votre message a bien été envoyé. Nous vous répondrons sous 24h.
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOUTON RETOUR EN HAUT ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

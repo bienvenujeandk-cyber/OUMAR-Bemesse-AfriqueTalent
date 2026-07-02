@@ -114,4 +114,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
   statNumbers.forEach(el => counterObserver.observe(el));
 
+  /* ===================== FILTRAGE DYNAMIQUE DES FREELANCES ===================== */
+  const filterBar = document.getElementById('filterBar');
+
+  if (filterBar) {
+    const filterButtons = filterBar.querySelectorAll('.filter-btn');
+    const freelanceItems = document.querySelectorAll('.freelance-item');
+    const noResults = document.getElementById('noResults');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        let visibleCount = 0;
+
+        freelanceItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          const matches = (filter === 'all' || category === filter);
+          item.style.display = matches ? '' : 'none';
+          if (matches) visibleCount++;
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      });
+    });
+  }
+
+  /* ===================== VALIDATION DU FORMULAIRE DE CONTACT ===================== */
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    const fields = {
+      fullName: { el: document.getElementById('fullName'), errorEl: document.getElementById('error-fullName') },
+      email: { el: document.getElementById('email'), errorEl: document.getElementById('error-email') },
+      subject: { el: document.getElementById('subject'), errorEl: document.getElementById('error-subject') },
+      message: { el: document.getElementById('message'), errorEl: document.getElementById('error-message') },
+    };
+    const successMessage = document.getElementById('successMessage');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const MIN_MESSAGE_LENGTH = 20;
+
+    const setError = (field, message) => {
+      field.el.classList.add('is-invalid');
+      field.errorEl.textContent = message;
+    };
+
+    const clearError = (field) => {
+      field.el.classList.remove('is-invalid');
+      field.errorEl.textContent = '';
+    };
+
+    const validateField = (name) => {
+      const field = fields[name];
+      const value = field.el.value.trim();
+
+      if (name === 'fullName') {
+        if (value === '') {
+          setError(field, 'Le nom complet est requis.');
+          return false;
+        }
+        if (value.length < 3) {
+          setError(field, 'Le nom doit contenir au moins 3 caractères.');
+          return false;
+        }
+      }
+
+      if (name === 'email') {
+        if (value === '') {
+          setError(field, "L'adresse email est requise.");
+          return false;
+        }
+        if (!emailRegex.test(value)) {
+          setError(field, 'Veuillez entrer une adresse email valide.');
+          return false;
+        }
+      }
+
+      if (name === 'subject') {
+        if (value === '') {
+          setError(field, 'Le sujet est requis.');
+          return false;
+        }
+      }
+
+      if (name === 'message') {
+        if (value === '') {
+          setError(field, 'Le message est requis.');
+          return false;
+        }
+        if (value.length < MIN_MESSAGE_LENGTH) {
+          setError(field, `Le message doit contenir au moins ${MIN_MESSAGE_LENGTH} caractères (actuellement ${value.length}).`);
+          return false;
+        }
+      }
+
+      clearError(field);
+      return true;
+    };
+
+    // Validation en direct pendant la saisie
+    Object.keys(fields).forEach(name => {
+      fields[name].el.addEventListener('input', () => validateField(name));
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      successMessage.classList.remove('show');
+
+      let isFormValid = true;
+      Object.keys(fields).forEach(name => {
+        if (!validateField(name)) isFormValid = false;
+      });
+
+      if (isFormValid) {
+        successMessage.classList.add('show');
+        contactForm.reset();
+        Object.keys(fields).forEach(name => clearError(fields[name]));
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
+
 });

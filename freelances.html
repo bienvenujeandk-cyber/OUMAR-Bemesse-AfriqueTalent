@@ -1,1 +1,131 @@
-<!DOCTYPE html><html><head><link rel='stylesheet' href='css/style.css'></head><body><nav><span class='logo'>AfriTalent</span><a>Accueil</a><a>Freelances</a><a>Tarifs</a><a>À propos</a><a>Contact</a></nav></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfriqueTalent - Nos freelances</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Afrique<span class="highlight">Talent</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
+        <li class="nav-item">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== EN-TÊTE ===================== -->
+<section class="about-hero fade-in-section">
+  <div class="container">
+    <h1>Nos <span class="highlight">freelances</span></h1>
+    <p class="lead">Parcourez les profils par catégorie et trouvez le talent qu'il vous faut.</p>
+  </div>
+</section>
+
+<!-- ===================== FILTRES ===================== -->
+<section class="freelances-list fade-in-section">
+  <div class="container">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="dev">Développement</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="marketing">Marketing</button>
+      <button class="filter-btn" data-filter="redaction">Rédaction</button>
+    </div>
+
+    <div class="row g-4" id="freelanceGrid">
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="dev">
+        <div class="freelance-card">
+          <div class="freelance-avatar">MK</div>
+          <h4>Malick K.</h4>
+          <span class="freelance-role">Développeur Full-Stack</span>
+          <p>React, Node.js, PostgreSQL. 6 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 4.9</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="design">
+        <div class="freelance-card">
+          <div class="freelance-avatar">AS</div>
+          <h4>Aïssatou S.</h4>
+          <span class="freelance-role">UI/UX Designer</span>
+          <p>Figma, prototypage, design system. 4 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 5.0</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="marketing">
+        <div class="freelance-card">
+          <div class="freelance-avatar">JD</div>
+          <h4>Joseph D.</h4>
+          <span class="freelance-role">Growth Marketer</span>
+          <p>SEO, réseaux sociaux, campagnes pub. 5 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 4.7</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="redaction">
+        <div class="freelance-card">
+          <div class="freelance-avatar">FN</div>
+          <h4>Fatou N.</h4>
+          <span class="freelance-role">Rédactrice web & traductrice</span>
+          <p>Contenu SEO, traduction FR/EN. 3 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 4.8</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="dev">
+        <div class="freelance-card">
+          <div class="freelance-avatar">OB</div>
+          <h4>Oumar B.</h4>
+          <span class="freelance-role">Développeur mobile</span>
+          <p>Flutter, Kotlin, intégration API. 4 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 4.9</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 freelance-item" data-category="design">
+        <div class="freelance-card">
+          <div class="freelance-avatar">RL</div>
+          <h4>Rania L.</h4>
+          <span class="freelance-role">Graphiste & identité visuelle</span>
+          <p>Logo, charte graphique, print. 7 ans d'expérience.</p>
+          <div class="freelance-rating"><i class="bi bi-star-fill"></i> 4.6</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="no-results" id="noResults">Aucun freelance ne correspond à cette catégorie.</p>
+  </div>
+</section>
+
+<!-- ===================== BOUTON RETOUR EN HAUT ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
