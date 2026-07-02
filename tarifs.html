@@ -1,1 +1,230 @@
-<!DOCTYPE html><html><head><link rel='stylesheet' href='css/style.css'></head><body><nav><span class='logo'>AfriTalent</span><a>Accueil</a><a>Freelances</a><a>Tarifs</a><a>À propos</a><a>Contact</a></nav></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AfriTalent – Découvrez nos plans tarifaires : Gratuit, Pro et Entreprise." />
+  <title>AfriTalent – Tarifs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="CSS/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navigation principale">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-globe-africa"></i> AfriTalent</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifs.html">Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-2">
+              <label class="dark-toggle" aria-label="Activer le mode sombre">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="toggle-track"></span>
+                <i class="bi bi-moon-fill"></i>
+              </label>
+            </li>
+            <li class="nav-item ms-2"><a class="btn btn-primary btn-sm" href="contact.html">Rejoindre AfriTalent</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Nos Tarifs</h1>
+        <p>Des plans flexibles adaptés à chaque besoin, du freelance indépendant à la grande entreprise.</p>
+      </div>
+    </div>
+
+    <!-- ==================== PRICING CARDS ==================== -->
+    <section class="py-5 fade-in">
+      <div class="container">
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <!-- Plan Gratuit -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card h-100">
+              <h4>Gratuit</h4>
+              <p class="price">0 €<span>/mois</span></p>
+              <p class="text-muted">Idéal pour découvrir la plateforme</p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Création de profil</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> 3 candidatures / mois</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Messagerie de base</li>
+                <li><i class="bi bi-x-circle-fill check-no"></i> Mise en avant du profil</li>
+                <li><i class="bi bi-x-circle-fill check-no"></i> Statistiques avancées</li>
+                <li><i class="bi bi-x-circle-fill check-no"></i> Support prioritaire</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-primary w-100 mt-3">Commencer</a>
+            </div>
+          </div>
+          <!-- Plan Pro (populaire) -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card popular h-100">
+              <span class="badge-popular">⭐ Populaire</span>
+              <h4>Pro</h4>
+              <p class="price">29 €<span>/mois</span></p>
+              <p class="text-muted">Pour les freelances sérieux</p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Création de profil</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Candidatures illimitées</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Messagerie avancée</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Profil mis en avant</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Statistiques avancées</li>
+                <li><i class="bi bi-x-circle-fill check-no"></i> Account manager dédié</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary w-100 mt-3">Choisir Pro</a>
+            </div>
+          </div>
+          <!-- Plan Entreprise -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card h-100">
+              <h4>Entreprise</h4>
+              <p class="price">99 €<span>/mois</span></p>
+              <p class="text-muted">Pour les équipes et agences</p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Tout le plan Pro</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Multi-utilisateurs (5)</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> API d'intégration</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Account manager dédié</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> Facturation centralisée</li>
+                <li><i class="bi bi-check-circle-fill check-yes"></i> SLA garanti 99.9 %</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-primary w-100 mt-3">Contacter les ventes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="py-5 fade-in">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-title">
+          <h2>Questions fréquentes</h2>
+          <p>Tout ce que vous devez savoir sur AfriTalent.</p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <!-- Q1 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                Comment fonctionne AfriTalent ?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                AfriTalent met en relation des freelances tech africains avec des entreprises. Créez votre profil, parcourez les offres ou les talents, puis collaborez directement via notre plateforme sécurisée.
+              </div>
+            </div>
+          </div>
+          <!-- Q2 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                Puis-je changer de plan à tout moment ?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Oui, vous pouvez passer d'un plan à l'autre à tout moment depuis votre tableau de bord. La facturation sera ajustée au prorata.
+              </div>
+            </div>
+          </div>
+          <!-- Q3 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                Les paiements sont-ils sécurisés ?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Absolument. Tous les paiements transitent par notre système sécurisé avec chiffrement SSL. Les fonds sont protégés via un système d'escrow jusqu'à validation de la mission.
+              </div>
+            </div>
+          </div>
+          <!-- Q4 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                Comment sont vérifiés les profils freelances ?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Chaque freelance passe par un processus de vérification : validation d'identité, examen du portfolio et test technique optionnel pour obtenir un badge « Vérifié ».
+              </div>
+            </div>
+          </div>
+          <!-- Q5 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                Quels pays sont couverts par AfriTalent ?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                AfriTalent est disponible dans plus de 30 pays africains, incluant le Sénégal, la Côte d'Ivoire, le Nigeria, le Kenya, le Ghana, le Maroc, l'Afrique du Sud et bien d'autres.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5><i class="bi bi-globe-africa"></i> AfriTalent</h5>
+          <p>La plateforme de référence pour connecter les freelances tech africains aux entreprises innovantes.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Liens utiles</h5>
+          <ul><li><a href="index.html">Accueil</a></li><li><a href="freelances.html">Freelances</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="about.html">À propos</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Ressources</h5>
+          <ul><li><a href="#">Blog</a></li><li><a href="#">Centre d'aide</a></li><li><a href="#">Conditions d'utilisation</a></li><li><a href="#">Politique de confidentialité</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact</h5>
+          <p><i class="bi bi-envelope"></i> oumarcrew00i@gmail.com</p>
+          <p><i class="bi bi-telephone"></i> +221 771 23 15 67</p>
+          <p><i class="bi bi-geo-alt"></i> Dakar, Senegal</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p></div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>

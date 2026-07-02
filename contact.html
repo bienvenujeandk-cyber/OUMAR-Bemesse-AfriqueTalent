@@ -1,97 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AfriqueTalent - Contact</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AfriTalent – Contactez-nous pour toute question ou demande de partenariat." />
+  <title>AfriTalent – Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="CSS/style.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- ===================== NAVBAR ===================== -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Afrique<span class="highlight">Talent</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
-        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
-        <li class="nav-item">
-          <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
-            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- ==================== NAVBAR ==================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navigation principale">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-globe-africa"></i> AfriTalent</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+            <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-2">
+              <label class="dark-toggle" aria-label="Activer le mode sombre">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="toggle-track"></span>
+                <i class="bi bi-moon-fill"></i>
+              </label>
+            </li>
+            <li class="nav-item ms-2"><a class="btn btn-primary btn-sm" href="contact.html">Rejoindre AfriTalent</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<!-- ===================== EN-TÊTE ===================== -->
-<section class="about-hero fade-in-section">
-  <div class="container">
-    <h1>Contactez-<span class="highlight">nous</span></h1>
-    <p class="lead">Une question, un projet ? Écrivez-nous, nous vous répondons rapidement.</p>
-  </div>
-</section>
-
-<!-- ===================== FORMULAIRE DE CONTACT ===================== -->
-<section class="contact-section fade-in-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7">
-
-        <form id="contactForm" novalidate>
-
-          <div class="form-group mb-4">
-            <label for="fullName">Nom complet</label>
-            <input type="text" id="fullName" name="fullName" class="form-control-custom" placeholder="Votre nom et prénom">
-            <span class="error-message" id="error-fullName"></span>
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="email">Adresse email</label>
-            <input type="text" id="email" name="email" class="form-control-custom" placeholder="vous@exemple.com">
-            <span class="error-message" id="error-email"></span>
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="subject">Sujet</label>
-            <input type="text" id="subject" name="subject" class="form-control-custom" placeholder="Objet de votre message">
-            <span class="error-message" id="error-subject"></span>
-          </div>
-
-          <div class="form-group mb-4">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="form-control-custom" rows="6" placeholder="Décrivez votre besoin (20 caractères minimum)"></textarea>
-            <span class="error-message" id="error-message"></span>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-lg w-100">Envoyer le message</button>
-
-          <div class="success-message" id="successMessage">
-            <i class="bi bi-check-circle-fill"></i> Votre message a bien été envoyé. Nous vous répondrons sous 24h.
-          </div>
-
-        </form>
-
+  <main>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+        <p>Une question, une suggestion ou une demande de partenariat ? Nous sommes à votre écoute.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ===================== BOUTON RETOUR EN HAUT ===================== -->
-<button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
-  <i class="bi bi-arrow-up"></i>
-</button>
+    <!-- ==================== FORMULAIRE + INFOS ==================== -->
+    <section class="py-5 fade-in">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Formulaire de contact -->
+          <div class="col-lg-7">
+            <h2>Envoyez-nous un message</h2>
+            <form id="contact-form" novalidate>
+              <div class="row g-3">
+                <!-- Prénom -->
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">Prénom <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Votre prénom" required aria-required="true" />
+                  <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
+                </div>
+                <!-- Nom -->
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">Nom <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Votre nom" required aria-required="true" />
+                  <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+                </div>
+                <!-- Email -->
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="exemple@mail.com" required aria-required="true" />
+                  <div class="invalid-feedback">Veuillez entrer un email valide.</div>
+                </div>
+                <!-- Sujet -->
+                <div class="col-12">
+                  <label for="subject" class="form-label">Sujet <span class="text-danger">*</span></label>
+                  <select class="form-select" id="subject" required aria-required="true">
+                    <option value="">Choisir un sujet...</option>
+                    <option value="info">Demande d'information</option>
+                    <option value="support">Support technique</option>
+                    <option value="partner">Partenariat</option>
+                    <option value="other">Autre</option>
+                  </select>
+                  <div class="invalid-feedback">Veuillez choisir un sujet.</div>
+                </div>
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="message" class="form-label">Message <span class="text-danger">*</span> <small class="text-muted">(min. 20 caractères)</small></label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Écrivez votre message ici..." required aria-required="true"></textarea>
+                  <div class="invalid-feedback">Le message doit contenir au moins 20 caractères.</div>
+                </div>
+                <!-- Bouton -->
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Envoyer le message</button>
+                </div>
+              </div>
+              <!-- Message de succès -->
+              <div id="form-success" class="mt-3" style="display:none;">
+                <i class="bi bi-check-circle-fill"></i> Votre message a été envoyé avec succès ! Nous vous répondrons sous 24h.
+              </div>
+            </form>
+          </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+          <!-- Informations de contact -->
+          <div class="col-lg-5">
+            <h2>Nos coordonnées</h2>
+            <div class="contact-info mt-3">
+              <p><i class="bi bi-envelope-fill"></i> <strong>Email :</strong> oumarcrew00i@gmail.com</p>
+              <p><i class="bi bi-telephone-fill"></i> <strong>Téléphone :</strong> +221 77 123 15 67</p>
+              <p><i class="bi bi-geo-alt-fill"></i> <strong>Adresse :</strong> 6 Rue Médina, Dakar, Senegal</p>
+              <p><i class="bi bi-clock-fill"></i> <strong>Horaires :</strong> Lun – Ven, 08h – 18h (GMT)</p>
+            </div>
+
+            <h5 class="mt-4 mb-3">Notre localisation</h5>
+            <!-- Carte Google Maps intégrée -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.2212409494829!2d-17.454587678349174!3d14.682035412539744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1725fc7a53f7b%3A0x7a24d37711861168!2s10%20Bd%20de%20la%20Gueule%20Tapee%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1779079002011!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5><i class="bi bi-globe-africa"></i> AfriTalent</h5>
+          <p>La plateforme de référence pour connecter les freelances tech africains aux entreprises innovantes.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Liens utiles</h5>
+          <ul><li><a href="index.html">Accueil</a></li><li><a href="freelances.html">Freelances</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="about.html">À propos</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Ressources</h5>
+          <ul><li><a href="#">Blog</a></li><li><a href="#">Centre d'aide</a></li><li><a href="#">Conditions d'utilisation</a></li><li><a href="#">Politique de confidentialité</a></li></ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact</h5>
+          <p><i class="bi bi-envelope"></i> oumarcrew00i@gmail.com</p>
+          <p><i class="bi bi-telephone"></i> +221 77 123 15 67</p>
+          <p><i class="bi bi-geo-alt"></i> Dakar, Senegal</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p></div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
 </body>
 </html>
