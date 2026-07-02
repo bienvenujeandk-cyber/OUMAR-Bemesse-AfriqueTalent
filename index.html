@@ -20,7 +20,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
         <li class="nav-item"><a class="nav-link" href="#how">Comment ça marche</a></li>
         <li class="nav-item"><a class="nav-link" href="#categories">Catégories</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Témoignages</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
         <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
         <li class="nav-item">
           <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
@@ -33,7 +33,7 @@
 </nav>
 
 <!-- ===================== HERO ===================== -->
-<section class="hero">
+<section class="hero fade-in-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-7 hero-text">
@@ -51,8 +51,40 @@
   </div>
 </section>
 
+<!-- ===================== STATISTIQUES (compteurs animés) ===================== -->
+<section class="stats fade-in-section">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="1200" data-suffix="+">0</span>
+          <p>Talents inscrits</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="850" data-suffix="+">0</span>
+          <p>Projets réalisés</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="15" data-suffix="">0</span>
+          <p>Pays couverts</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="98" data-suffix="%">0</span>
+          <p>Clients satisfaits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== COMMENT ÇA MARCHE (Bento Grid) ===================== -->
-<section class="how-it-works" id="how">
+<section class="how-it-works fade-in-section" id="how">
   <div class="container">
     <h2 class="section-title">Comment ça marche</h2>
     <div class="bento-grid">
@@ -81,7 +113,7 @@
 </section>
 
 <!-- ===================== CATÉGORIES DE SERVICES ===================== -->
-<section class="categories" id="categories">
+<section class="categories fade-in-section" id="categories">
   <div class="container">
     <h2 class="section-title">Catégories de services</h2>
     <div class="row g-4">
@@ -118,7 +150,7 @@
 </section>
 
 <!-- ===================== TÉMOIGNAGES (Carousel Bootstrap) ===================== -->
-<section class="testimonials">
+<section class="testimonials fade-in-section">
   <div class="container">
     <h2 class="section-title">Témoignages</h2>
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">

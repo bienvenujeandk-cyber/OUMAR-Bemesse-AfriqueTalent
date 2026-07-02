@@ -1,1 +1,129 @@
-<!DOCTYPE html><html><head><link rel='stylesheet' href='css/style.css'></head><body><nav><span class='logo'>AfriTalent</span><a>Accueil</a><a>Freelances</a><a>Tarifs</a><a>À propos</a><a>Contact</a></nav></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfriqueTalent - À propos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Afrique<span class="highlight">Talent</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 text-center align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#how">Comment ça marche</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#categories">Catégories</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm px-3 ms-lg-2" href="#">Devenir freelance</a></li>
+        <li class="nav-item">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Dark / Light mode">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== EN-TÊTE À PROPOS ===================== -->
+<section class="about-hero fade-in-section">
+  <div class="container">
+    <h1>À propos d'<span class="highlight">AfriqueTalent</span></h1>
+    <p class="lead">Nous connectons les entreprises aux meilleurs talents freelances d'Afrique, pour des collaborations rapides, fiables et de qualité.</p>
+  </div>
+</section>
+
+<!-- ===================== NOTRE MISSION ===================== -->
+<section class="mission fade-in-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="section-title text-lg-start">Notre mission</h2>
+        <p>AfriqueTalent est née d'un constat simple : le continent regorge de talents freelances brillants, mais les entreprises peinent souvent à les trouver. Notre plateforme simplifie la mise en relation, sécurise les paiements et garantit un suivi de qualité, du premier échange à la livraison finale.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="mission-visual"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATISTIQUES (compteurs animés) ===================== -->
+<section class="stats fade-in-section">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="1200" data-suffix="+">0</span>
+          <p>Talents inscrits</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="850" data-suffix="+">0</span>
+          <p>Projets réalisés</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="15" data-suffix="">0</span>
+          <p>Pays couverts</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="98" data-suffix="%">0</span>
+          <p>Clients satisfaits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALEURS ===================== -->
+<section class="categories fade-in-section">
+  <div class="container">
+    <h2 class="section-title">Nos valeurs</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="category-card">
+          <i class="bi bi-shield-check"></i>
+          <h4>Confiance</h4>
+          <p>Paiements sécurisés et profils vérifiés</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="category-card">
+          <i class="bi bi-lightning-charge"></i>
+          <h4>Rapidité</h4>
+          <p>Trouvez un talent en quelques heures</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="category-card">
+          <i class="bi bi-globe2"></i>
+          <h4>Ouverture</h4>
+          <p>Des talents partout sur le continent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOUTON RETOUR EN HAUT ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

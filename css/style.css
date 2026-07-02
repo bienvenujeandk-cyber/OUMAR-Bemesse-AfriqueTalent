@@ -444,3 +444,81 @@ body {
   background: #d88a1f;
   transform: translateY(-4px);
 }
+
+/* ===================== FADE-IN DES SECTIONS AU SCROLL ===================== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== STATISTIQUES (compteurs animés) ===================== */
+.stats {
+  padding: 4rem 0;
+  background: var(--dark);
+  color: #fff;
+}
+
+.stat-item .stat-number {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: #d8d4cd;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ===================== PAGE À PROPOS ===================== */
+.about-hero {
+  background: linear-gradient(135deg, var(--dark), #2e2a24);
+  color: #fff;
+  padding: 9rem 0 4rem;
+  text-align: center;
+}
+
+.about-hero .lead {
+  max-width: 640px;
+  margin: 1rem auto 0;
+  color: #d8d4cd;
+}
+
+.mission {
+  padding: 6rem 0;
+}
+
+.mission .section-title {
+  text-align: left;
+}
+
+.mission p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.mission-visual {
+  height: 280px;
+  border-radius: 20px;
+  background: radial-gradient(circle at 30% 30%, var(--primary), #2e2a24 75%);
+}
+
+@media (max-width: 767px) {
+  .stat-item .stat-number {
+    font-size: 2.1rem;
+  }
+
+  .mission-visual {
+    height: 200px;
+  }
+}
